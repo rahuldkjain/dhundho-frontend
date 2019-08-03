@@ -6,12 +6,13 @@
         <b-form-input
           id="search-input"
           type="text"
+          v-model="searchQuery"
           required
           placeholder="Search product"
         ></b-form-input>
       </b-col>
       <b-col>
-        <b-button variant="success" id="search-button">Search</b-button>
+        <b-button variant="success" id="search-button" @click="searchCall()">Search</b-button>
       </b-col>
     </b-row>
   </div>
@@ -21,12 +22,22 @@
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 
-// export default {
-//   name: 'home',
-//   components: {
-//     HelloWorld
-//   }
-// }
+export default {
+  name: 'home',
+  // components: {
+  //   HelloWorld
+  // }
+  data () {
+    return {
+      searchQuery: ""
+    }
+  },
+  methods: {
+    searchCall: function () {
+      this.$store.dispatch('search', this.searchQuery)
+    }
+  },  
+}
 </script>
 
 <style lang="scss">
