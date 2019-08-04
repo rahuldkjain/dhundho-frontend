@@ -4,11 +4,11 @@ export default {
         searchResult: "",
     },
     getters: {
-        getCartItem: (state) => state.searchResult
+        getSearchResult: (state) => state.searchResult
     },
     mutations: {
         SET_RESULT: (state, result) => {
-            state.searchResult = result
+            state.searchResult = result.data
         }
     },
     actions: {

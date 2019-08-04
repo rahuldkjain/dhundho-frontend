@@ -3,9 +3,8 @@
     <div class="nav-bar">
       <b-row class="nav-border">
         <img id="logo-image" src="https://img.icons8.com/color/48/000000/wolfram-alpha.png">
-        <h2 class="logo">Dhundho</h2>
-        <a href="#" id="about-link" target="_blank">About</a>
-        <a href="#" id="help-link" target="_blank">Help</a>
+        <h2><router-link to="/" class="logo">Dhundho</router-link></h2>
+        <router-link to="about" id="about-link">About Us</router-link>
       </b-row>
       
     </div>
@@ -27,12 +26,6 @@
     left: 74%;
     font-size: 18px;
 }
-#help-link {
-    color: #333333;
-    position: relative;
-    left: 75%;
-    font-size: 18px;
-}
 .nav-bar {
     margin: 0% 6% 1% 6%;
     border-bottom-left-radius: 10px;
@@ -48,5 +41,8 @@
   background: #f7f7f7;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+.logo {
+  color: black;
 }
 </style>
